@@ -1,0 +1,129 @@
+._ip__services{margin-bottom: 30px;}
+._ips__heading{
+	@media @media-screen{
+		margin-bottom: 70px;
+	}
+}
+._ips__row{
+	flex-wrap:wrap;
+}
+._ips__cols{
+	width: 50%;
+	@media @media-size-xs{
+		width: 100%;
+	}
+	@media @media-size-xs-l{
+		width: 50%;
+	}
+	@amount: 4; 
+	@before-width: 66px;
+	@after-width: 190px;
+	@before-width-d: 50px;
+	
+	.myLoop (@index) when (@index < @amount) {  
+		@child: @index + 1;
+  		&:nth-child(@{child}) {
+	    	.servises-item:before{background-position: 0 -(@index * @before-width)}
+	    	@media @media-device{
+		    	.servises-item:before{background-position: 0 -(@index * @before-width-d)}
+		    }
+	    	.servises-item:after{background-position: 0 -(@index * @after-width)}
+	  	}
+	  	.myLoop(@index + 1); 
+	}
+	.myLoop (0);
+	&:nth-child(1){
+		.servises-item:after{
+			top: -10px;
+			right: 140px;
+		}
+	}
+	&:nth-child(2){
+		.servises-item:after{
+			top: -20px;
+    		right: 115px;
+		}
+	}
+	&:nth-child(3){
+		.servises-item:after{
+	        top: 5px;
+    		right: -35px;
+		}
+	}
+	&:nth-child(4){
+		.servises-item:after{
+			top: -30px;
+    		right: -20px;
+		}
+	}
+	@media @media-size-xs {
+		&:last-child{
+			.servises-item{padding-bottom: 0}
+		}
+	}
+}
+
+.servises-item{
+	line-height: 22px;
+	padding-bottom: 110px;
+	position: relative;
+	@media @media-size-xs {
+		padding-bottom: 50px;
+	}
+	@media @media-size-sm {
+		padding-bottom: 70px;
+	}
+	@media @media-device{
+		font-size: 13px;
+		line-height: 20px;
+		padding-top: 66px;
+	}
+	@media @media-screen{
+		padding-left: 185px;
+	}
+	&:before{
+		content: '';
+		width: 66px;
+		height: 66px;
+		background: url('@{url-path-img}/index/bg-servises-patern.png');
+		position: absolute;
+		top: 0;		
+		@media @media-device{
+			left: 50%;
+			transform: translateX(-50%);
+			background-size: 50px;
+			width: 50px;
+			height: 50px;
+		}
+		@media @media-screen{
+			left: 85px;
+		}
+	}
+	&:after{
+		content: '';
+		width: 190px;
+		height: 190px;
+		background: url('@{url-path-img}/index/bg-servises-figure-patern.png');
+		position: absolute;
+		@media @media-size-xs {display: none;}
+	}
+}
+._ips__item-heading{
+	font-size: 20px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	margin-bottom: 7px;
+	color: #3d6889;
+	text-transform: uppercase;
+	font-family: @roboto-cond-bold;
+	@media @media-size-xs {
+		font-size: 16px;
+    	line-height: 20px;
+		margin-bottom: 5px;		
+	}	
+	@media @media-size-sm {
+		font-size: 18px;
+    	line-height: 22px;
+		margin-bottom: 5px;		
+	}	
+}

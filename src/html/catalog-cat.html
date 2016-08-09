@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/default/head/.html" ] 
+		<link rel="stylesheet" href="/plugins/ion.rangeSlider-2.1.4/css/ion.rangeSlider.css">
+		<link rel="stylesheet" href="/plugins/ion.rangeSlider-2.1.4/css/ion.rangeSlider.skinNice.css">
+	</head>
+	<body>	
+		[snp tpl="src/block/site/default/header/.html" class="header-site" ]
+		<div class="navbar-second-page">
+			<div class="container">
+				[snp tpl="src/block/site/default/navbar/.html" class="navbar-site _czr__navbar-site" ]
+			</div>
+		</div>
+		[snp tpl="src/block/site/page/catalog/cat/.html" class="catalog-page-content content-site content-site__second" ]  
+
+		[snp tpl="src/block/site/default/footer/.html" class="footer-site" ]
+
+		[snp tpl="src/block/site/default/head/script.html" ]
+		<script src="/js/jquery.touchSwipe.min.js" ></script>
+		<script src="/plugins/ion.rangeSlider-2.1.4/js/ion.rangeSlider.min.js" ></script>
+
+		<script>
+			$(window).load(function(){
+				$("[data-toggle-nav]").click(function() {
+					var toggle_el = $(this).data("toggle-nav"); 
+					$(toggle_el).toggleClass("open-sidebar");
+				});
+			});
+			$(document).ready(function() {
+				$("#rangeSlider").ionRangeSlider({
+				    type: "double",
+				    //grid: true, 
+				    min: 800,
+				    max: 115000,
+				    from: 30000,
+				    to: 80000
+				    //prefix: "$"
+				});
+				//https://github.com/IonDen/ion.rangeSlider/blob/master/readme.ru.md				
+			});
+		</script>
+	</body>
+</html> 

@@ -1,0 +1,81 @@
+@roboto: 			roboto;
+@roboto-bold: 		robotobold;
+@roboto-light: 		robotolight;
+@roboto-italic: 	robotoitalic;
+@roboto-med: 		robotomedium;
+
+@minion: 			minionpro;
+@minion-bold: 		minionpro-bold;
+
+@roboto-cond-bold: 	robotocondensedbold;
+
+@opensans: 			opensans;
+
+@pts: 				ptserif;
+@pts-bold: 			ptserifbold;
+@pts-bold-ital: 	ptserifbolditalic;
+
+@icon: 				Flaticon;
+.include-custom-font(@family: @muller, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.eot');
+		src:url('@{url-path-fonts}/@{family}.eot?#iefix') format('embedded-opentype'),
+			url('@{url-path-fonts}/@{family}.woff') format('woff'),
+			url('@{url-path-fonts}/@{family}.ttf') format('truetype'),
+			url('@{url-path-fonts}/@{family}.svg#icon') format('svg');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+/*roboto*/
+.include-custom-font(@family: @roboto, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-light, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-italic, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @roboto-med, 		@weight: normal, @style: normal);
+/*end's roboto*/
+/*roboto-cond*/
+.include-custom-font(@family: @roboto-cond-bold, 	@weight: normal, @style: normal);
+/*end's roboto-cond*/
+/*ptserif*/
+.include-custom-font(@family: @pts, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @pts-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @pts-bold-ital, 	@weight: normal, @style: normal);
+/*end's ptserif*/
+/*minion*/
+.include-custom-font(@family: @minion, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @minion-bold, 	@weight: normal, @style: normal);
+/*end's minion*/
+/*opensans*/
+.include-custom-font(@family: @opensans, 		@weight: normal, @style: normal);
+/*end's opensans*/
+.include-custom-font(@family: @icon, 			@weight: normal, @style: normal);
+
+@icon-arrow-down: 		"\f100";
+@icon-arrow-forward: 	"\f101";
+@icon-arrow-next: 		"\f102";
+@icon-arrow-prev: 		"\f103";
+@icon-arrow-up: 		"\f104";
+@icon-bars: 			"\f105";
+@icon-call: 			"\f106";
+@icon-clock: 			"\f107";
+@icon-close: 			"\f108";
+@icon-correct: 			"\f109";
+@icon-fast-forward: 	"\f10a";
+@icon-fb: 				"\f10b";
+@icon-map: 				"\f10c";
+@icon-menu: 			"\f10d";
+@icon-minus: 			"\f10e";
+@icon-ok: 				"\f10f";
+@icon-plus: 			"\f110";
+@icon-ruble: 			"\f111";
+@icon-search: 			"\f112";
+@icon-tw: 				"\f113";
+@icon-vk: 				"\f114";
+@icon-basket: 			"\f115";
+@icon-filter: 			"\f116";
+
+.icon-call:before{content: @icon-call}
+.icon-clock:before{content: @icon-clock}
+.icon-map:before{content: @icon-map}
