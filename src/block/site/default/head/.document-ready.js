@@ -12,12 +12,10 @@ $('._ip__slider').owlCarousel({
 	dots: true,
 	navText: [],
 	autoplay:true,
-	autoplayTimeout:10000,
-	autoplayHoverPause:true ,
+	autoplayTimeout:5000,
 	responsive:{
 	   	0:{nav: false},
 	   	768:{nav: true}
-
 	} 
 }); 
 $('._ipn__carousel').owlCarousel({
